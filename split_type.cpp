@@ -27,8 +27,8 @@ MPI_COMM_TYPE_SHARED, 0, MPI_INFO_NULL, &lcom );
 
 int shared_rank = -1;
 int shared_size = -1;
-MPI_Comm_rank(lcom, &shared_rank);
-MPI_Comm_size(lcom, &shared_size);
+MPI_Comm_rank(lcom, &shared_rank);  
+MPI_Comm_size(lcom, &shared_size);  // expect np % cores-per-node
     
 // Print off a hello world message
     printf("Hello world from processor %s, rank %d"
